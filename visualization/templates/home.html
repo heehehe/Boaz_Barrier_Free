@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>main page</title> 
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link href="/static/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/static/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=94a1e68abfeb339d0f80d238d1635f17"></script>
+</head>
+
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">WELCOME TO BF</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="#" accesskey="1" title="">Homepage</a></li>
+				<li><a href="#" accesskey="2" title="">시설 안내</a></li>
+				<li><a href="#" accesskey="3" title="">입지 추천</a></li>
+				<li><a href="#" accesskey="4" title="">기능 3</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 서울 시설 위치 선택[아직 어떤 방식으로 보내야할지 결정못함]-->
+<div class="wrapper">
+	<div id="mapwrap"> 
+    <!-- 지도가 표시될 div -->
+	    <div id="map" style="width:100%;height:350px;"></div>
+	    <!-- 지도 위에 표시될 마커 카테고리 -->
+	    <div class="category">
+	        <ul>
+	            <li id="coffeeMenu" onclick="changeMarker('coffee')">
+	                <span class="ico_comm ico_coffee"></span>
+	                커피숍
+	            </li>
+	            <li id="storeMenu" onclick="changeMarker('store')">
+	                <span class="ico_comm ico_store"></span>
+	                편의점
+	            </li>
+	            <li id="carparkMenu" onclick="changeMarker('carpark')">
+	                <span class="ico_comm ico_carpark"></span>
+	                주차장
+	            </li>
+	        </ul>
+	    </div>
+	</div>
+
+	<script src='/static/default.js'></script>
+
+    <div id="CheckSeoul">
+        <h2>Seoul</h2>
+        <span class="icon icon-map-marker"></span>
+        <label>원하는 시설의 위치를 선택하세요</label></br>
+        <input type="checkbox" name="big-category" value="편의시설">편의시설</br>
+        <input type="checkbox" name="big-category" value="병원">병원</br>
+        <input type="checkbox" name="big-category" value="공공시설">공공시설</br>
+        <input type="checkbox" name="big-category" value="교통">교통
+    </div>  
+
+<!-- 클릭하면 상세 설명[아직 어떤 방식으로 보내야할지 결정못함]-->
+<div class="title">
+	<div id="portfolio" class="container">
+		<div><span class="arrow-down"></span></div>
+		<div id="category1">
+			<div class="title">
+				<h2>편의시설</h2>
+			</div>
+            <a href="#" class="button">전동휠체어</a>
+            <a href="#" class="button">전동휠체어</a>
+            <a href="#" class="button">전동휠체어</a> 
+            <a href="#" class="button">전동휠체어</a>
+            <a href="#" class="button">전동휠체어</a>
+            <a href="#" class="button">전동휠체어</a> 
+        </div>
+	    
+        <div id="category2">
+			<div class="title">
+				<h2>병원</h2>
+			</div>
+            <a href="#" class="button">종합병원</a>
+            <a href="#" class="button">요양병원</a>
+        </div>
+        <div id="category3">
+                <div class="title">
+                    <h2>공공시설</h2>
+                </div>
+                <a href="#" class="button">도서관</a>
+                <a href="#" class="button">특수학교</a>
+                <a href="#" class="button">보호시설</a>
+            </div>
+            
+        <div id="category4">
+			<div class="title">
+				<h2>교통</h2>
+			</div>
+			<a href="#" class="button">지하철</a>
+            <a href="#" class="button">버스</a>
+        </div>
+    </div>
+</div>
+
+<div id="copyright">
+	<p>&copy; BOAZ PROJECT 나지혜 임채현 전희선</p>
+</div>
+
+</body>
+</html>
