@@ -17,17 +17,17 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 // 커피숍 마커가 표시될 좌표 배열입니다
 // var coffeePositions = new Array();
 // 	{% for fac in facility %}
-// 		coffeePositions[fac.id] = new kakao.maps.LagLng({{fac.위도}}, {{fac.경도}})
+// 		coffeePositions[fac.id] = new kakao.maps.LagLng("{{fac.위도}}", "{{fac.경도}}")
 // 	{% endfor %}
-var coffeePositions = [ 
-    new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
-    new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
-    new kakao.maps.LatLng(37.498553760499505, 127.02882598822454),
-    new kakao.maps.LatLng(37.497625593121384, 127.02935713582038),
-    new kakao.maps.LatLng(37.49646391248451, 127.02675574250912),
-    new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
-    new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)        
-];
+// var coffeePositions = [ 
+//     new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
+//     new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
+//     new kakao.maps.LatLng(37.498553760499505, 127.02882598822454),
+//     new kakao.maps.LatLng(37.497625593121384, 127.02935713582038),
+//     new kakao.maps.LatLng(37.49646391248451, 127.02675574250912),
+//     new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
+//     new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)        
+// ];
 
 // 편의점 마커가 표시될 좌표 배열입니다
 var storePositions = [
