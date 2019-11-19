@@ -14,9 +14,18 @@ class HomeView(TemplateView):
 
 
 '''
-def index(request):
-	facility = Facility.objects.all()
-	fac_hospital = Facility.objects.filter(대분류='편의시설')
-	# facility = serializers.serialize("json", facility)
-	args = {'facility': facility, 'fac_hospital': fac_hospital}
+def home(request):
+	fac_hospital = Facility.objects.filter(대분류='병원')
+	fac_comforts = Facility.objects.filter(대분류='편의시설')
+	fac_public = Facility.objects.filter(대분류='공공시설')
+	fac_traffic = Facility.objects.filter(대분류='교통')
+	args = {'fac_hospital': fac_hospital, 'fac_comforts': fac_comforts, 'fac_public': fac_public, 'fac_traffic': fac_traffic}
 	return render(request, './home.html', args)
+
+def facility_info(request):
+	fac_hospital = Facility.objects.filter(대분류='병원')
+	fac_comforts = Facility.objects.filter(대분류='편의시설')
+	fac_public = Facility.objects.filter(대분류='공공시설')
+	fac_traffic = Facility.objects.filter(대분류='교통')
+	args = {'fac_hospital': fac_hospital, 'fac_comforts': fac_comforts, 'fac_public': fac_public, 'fac_traffic': fac_traffic}
+	return render(request, './facility_info.html', args)
